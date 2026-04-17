@@ -1,0 +1,117 @@
+Upgrade this Faculty Attendance Notification System to include a strict and realistic authentication and admin system.
+
+AUTHENTICATION SYSTEM:
+
+1. Admin Login (ONLY ONE ADMIN):
+- Username: admin-user123
+- Password: 45678
+
+- If credentials do NOT match exactly, show:
+  "Invalid username or password"
+
+- Admin should be redirected to Admin Dashboard
+
+--------------------------------------
+
+2. Faculty Login (ONLY PREDEFINED USERS):
+
+Allow login ONLY for these faculty:
+
+1. Name: Dr. Anita Sharma  
+   ID: FAC-001  
+   Department: CSE
+
+2. Name: Prof. Ramesh Kumar  
+   ID: FAC-002  
+   Department: ECE
+
+RULES:
+- Name and ID must match EXACTLY
+- No partial matches
+- No random login allowed
+
+If invalid:
+- Show error:
+  "Invalid Faculty Credentials"
+
+--------------------------------------
+
+LOGIN FLOW:
+
+- First check if user is admin:
+  IF username === "admin-user123" AND password === "45678"
+  → Navigate to Admin Panel
+
+- ELSE check faculty:
+  IF name + ID matches faculty database
+  → Login success
+
+- ELSE:
+  Show error message
+
+--------------------------------------
+
+ADMIN PANEL:
+
+- Admin panel must be accessible ONLY after admin login
+- Hide admin tab from normal users
+
+Admin Features:
+1. View all faculty
+2. See attendance status (Present / Absent / Not Marked)
+3. Add new faculty
+
+--------------------------------------
+
+ADD FACULTY FEATURE:
+
+- Create a form in Admin Panel:
+  Fields:
+  - Name
+  - Faculty ID
+  - Department
+
+VALIDATION:
+- No empty fields
+- Faculty ID must be UNIQUE
+- If duplicate ID → show error
+- If invalid input → show error message
+
+ON SUCCESS:
+- Add faculty to list
+- Show success message
+
+--------------------------------------
+
+ATTENDANCE SYSTEM:
+
+Each faculty should have:
+- Present
+- Absent
+- Not Marked
+
+Display this in admin dashboard
+
+--------------------------------------
+
+UI REQUIREMENTS:
+
+- Clean modern UI
+- Show proper error messages
+- Use cards for faculty list
+- Highlight status (Present/Absent)
+
+--------------------------------------
+
+IMPORTANT:
+
+- Keep everything demo-based (no backend)
+- Use React state for storing faculty data
+- Ensure routing works correctly (Expo Router)
+- Ensure no crashes or undefined errors
+
+--------------------------------------
+
+GOAL:
+
+Make this app behave like a real college attendance system with strict login, admin control, and dynamic faculty management.
